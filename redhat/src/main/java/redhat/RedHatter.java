@@ -2,18 +2,18 @@ package redhat;
 
 public class RedHatter extends Pessoa {
 
-	private int centroDeCusto;
+	private Integer centroDeCusto;
 	private Double salario;
 	private String especialidade;
 	private String cargo;
 	private Integer idade;
 	private Long cpf;
 	
-	public int getCentroDeCusto() {
+	public Integer getCentroDeCusto() {
 		return centroDeCusto;
 	}
 
-	public void setCentroDeCusto(int centroDeCusto) {
+	public void setCentroDeCusto(Integer centroDeCusto) {
 		this.centroDeCusto = centroDeCusto;
 	}
 
@@ -59,7 +59,7 @@ public class RedHatter extends Pessoa {
 	}
 	
 	
-	public RedHatter(String nome, Integer idade, String email, Long cpf, int centroDeCusto, Double salario,
+	public RedHatter(String nome, Integer idade, String email, Long cpf, Integer centroDeCusto, Double salario,
 			String especialidade, String cargo) {
 		super(nome, email);
 		this.centroDeCusto = centroDeCusto;
@@ -69,12 +69,5 @@ public class RedHatter extends Pessoa {
 		this.idade = idade;
 		this.cpf = cpf;
 	}
-
-	public RedHatter(String nome, Integer idade, String email, Long cpf) {
-		super(nome, email);
-	}
-
-
-
-
+	
 }

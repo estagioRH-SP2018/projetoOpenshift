@@ -23,7 +23,6 @@ public abstract class Pessoa {
 
 
 	public Pessoa(String nome, String email) {
-		super();
 		this.nome = nome;
 		this.email = email;
 	}

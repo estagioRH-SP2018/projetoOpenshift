@@ -15,16 +15,18 @@ import redhat.Cliente;
 import redhat.Pessoa;
 import redhat.RedHatter;
 
+
+
 @Path("pessoa")
 public class PessoaRest {
 
-	HashSet<Pessoa> pessoas = new HashSet<>();
-	HashSet<RedHatter> redHatters = new HashSet<>();
-	HashSet<Cliente> clientes = new HashSet<>();
+	static HashSet<Pessoa> pessoas = new HashSet<>();
+	static HashSet<RedHatter> redHatters = new HashSet<>();
+	static HashSet<Cliente> clientes = new HashSet<>();
 
 	@POST
 	@Path("incluiRedHatter")
-	public void postRedCliente(@QueryParam("nome") String nome, @QueryParam("idade") Integer idade, @QueryParam("email") String email, @QueryParam("cpf") Long cpf, @QueryParam("centroDeCusto") Integer centroDeCusto, @QueryParam("salario") Double salario, @QueryParam("especialidade") String especialidade, @QueryParam("cargo") String cargo) {
+	public void postRedHatter(@QueryParam("nome") String nome, @QueryParam("idade") Integer idade, @QueryParam("email") String email, @QueryParam("cpf") Long cpf, @QueryParam("centroDeCusto") Integer centroDeCusto, @QueryParam("salario") Double salario, @QueryParam("especialidade") String especialidade, @QueryParam("cargo") String cargo) {
 		
 		RedHatter inclusao = new RedHatter(nome, idade, email, cpf, centroDeCusto, salario, especialidade, cargo);
 
@@ -34,7 +36,7 @@ public class PessoaRest {
 	
 	@POST
 	@Path("incluiCliente")
-	public void postRedHatter(@QueryParam("nome") String nome, @QueryParam("email") String email, @QueryParam("cpfVendedor") Long cpfVendedor, @QueryParam("cnpj") Long cnpj, @QueryParam("subscricaoAtiva") Boolean subscricaoAtiva) {
+	public void postCliente(@QueryParam("nome") String nome, @QueryParam("email") String email, @QueryParam("cpfVendedor") Long cpfVendedor, @QueryParam("cnpj") Long cnpj, @QueryParam("subscricaoAtiva") Boolean subscricaoAtiva) {
 
 		Cliente inclusao = new Cliente(nome, email, cpfVendedor, cnpj, subscricaoAtiva);
 		
