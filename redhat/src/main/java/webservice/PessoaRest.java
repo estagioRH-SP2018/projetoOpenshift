@@ -24,7 +24,7 @@ public class PessoaRest {
 
 	@POST
 	@Path("incluiRedHatter")
-	public void postRedCliente(@QueryParam("name") String nome, @QueryParam("idade") Integer idade, @QueryParam("email") String email, @QueryParam("cpf") Long cpf, @QueryParam("centroDeCusto") Integer centroDeCusto, @QueryParam("salario") Double salario, @QueryParam("especialidade") String especialidade, @QueryParam("cargo") String cargo) {
+	public void postRedCliente(@QueryParam("nome") String nome, @QueryParam("idade") Integer idade, @QueryParam("email") String email, @QueryParam("cpf") Long cpf, @QueryParam("centroDeCusto") Integer centroDeCusto, @QueryParam("salario") Double salario, @QueryParam("especialidade") String especialidade, @QueryParam("cargo") String cargo) {
 		
 		RedHatter inclusao = new RedHatter(nome, idade, email, cpf, centroDeCusto, salario, especialidade, cargo);
 
@@ -34,7 +34,7 @@ public class PessoaRest {
 	
 	@POST
 	@Path("incluiCliente")
-	public void postRedHatter(@QueryParam("name") String nome, @QueryParam("email") String email, @QueryParam("cpfVendedor") Long cpfVendedor, @QueryParam("cnpj") Long cnpj, @QueryParam("subscricaoAtiva") Boolean subscricaoAtiva) {
+	public void postRedHatter(@QueryParam("nome") String nome, @QueryParam("email") String email, @QueryParam("cpfVendedor") Long cpfVendedor, @QueryParam("cnpj") Long cnpj, @QueryParam("subscricaoAtiva") Boolean subscricaoAtiva) {
 
 		Cliente inclusao = new Cliente(nome, email, cpfVendedor, cnpj, subscricaoAtiva);
 		
