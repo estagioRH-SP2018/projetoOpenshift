@@ -2,11 +2,11 @@ package webservice;
 
 import java.util.HashSet;
 
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -23,27 +23,21 @@ public class PessoaRest {
 	HashSet<Cliente> clientes = new HashSet<>();
 
 	@POST
-	@Consumes("text/plain")
 	@Path("incluiRedHatter")
-	public void postRedHatter(String message) {
-		String[] params = message.split(" ");
-
-		RedHatter inclusao = new RedHatter(params[0], Integer.parseInt(params[1]), params[2], Long.parseLong(params[3]),
-				Integer.parseInt(params[4]), Double.parseDouble(params[5]), params[6], params[7]);
+	public void postRedCliente(@QueryParam("name") String nome, @QueryParam("idade") Integer idade, @QueryParam("email") String email, @QueryParam("cpf") Long cpf, @QueryParam("centroDeCusto") Integer centroDeCusto, @QueryParam("salario") Double salario, @QueryParam("especialidade") String especialidade, @QueryParam("cargo") String cargo) {
+		
+		RedHatter inclusao = new RedHatter(nome, idade, email, cpf, centroDeCusto, salario, especialidade, cargo);
 
 		redHatters.add(inclusao);
 		pessoas.add(inclusao);
 	}
 	
 	@POST
-	@Consumes("text/plain")
 	@Path("incluiCliente")
-	public void postCliente(String message) {
-		String[] params = message.split(" ");
+	public void postRedHatter(@QueryParam("name") String nome, @QueryParam("email") String email, @QueryParam("cpfVendedor") Long cpfVendedor, @QueryParam("cnpj") Long cnpj, @QueryParam("subscricaoAtiva") Boolean subscricaoAtiva) {
 
-		Cliente inclusao = new Cliente(params[0], params[1], Long.parseLong(params[2]), Long.parseLong(params[3]),
-				Boolean.parseBoolean(params[4]));
-
+		Cliente inclusao = new Cliente(nome, email, cpfVendedor, cnpj, subscricaoAtiva);
+		
 		clientes.add(inclusao);
 		pessoas.add(inclusao);
 	}
