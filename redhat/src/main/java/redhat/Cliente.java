@@ -2,28 +2,28 @@ package redhat;
 
 public class Cliente extends Pessoa {
 
-	private RedHatter vendedor;
+	private Long cpfVendedor;
 	private Long cnpj;
 	private Boolean subscricaoAtiva;
 
-	public Cliente(String nome, Integer idade, String email, Long cpf) {
-		super(nome, idade, email, cpf);
+	public Cliente(String nome, String email) {
+		super(nome, email);
 	}
 
-	public Cliente(String nome, Integer idade, String email, Long cpf, RedHatter vendedor, Long cnpj,
+	public Cliente(String nome, String email, Long cpfVendedor, Long cnpj,
 			Boolean subscricaoAtiva) {
-		super(nome, idade, email, cpf);
-		this.vendedor = vendedor;
+		super(nome, email);
+		this.cpfVendedor = cpfVendedor;
 		this.cnpj = cnpj;
 		this.subscricaoAtiva = subscricaoAtiva;
 	}
 
-	public RedHatter getVendedor() {
-		return vendedor;
+	public Long getCpfVendedor() {
+		return cpfVendedor;
 	}
 
-	public void setVendedor(RedHatter vendedor) {
-		this.vendedor = vendedor;
+	public void setCpfVendedor(Long vendedor) {
+		this.cpfVendedor = vendedor;
 	}
 
 	public Long getCnpj() {

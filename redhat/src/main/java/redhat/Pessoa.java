@@ -3,9 +3,7 @@ package redhat;
 public abstract class Pessoa {
 
 	private String nome;
-	private Integer idade;
 	private String email;
-	private Long cpf;
 
 	public String getNome() {
 		return nome;
@@ -13,14 +11,6 @@ public abstract class Pessoa {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public Integer getIdade() {
-		return idade;
-	}
-
-	public void setIdade(Integer idade) {
-		this.idade = idade;
 	}
 
 	public String getEmail() {
@@ -31,20 +21,11 @@ public abstract class Pessoa {
 		this.email = email;
 	}
 
-	public Long getCpf() {
-		return cpf;
-	}
 
-	public void setCpf(Long cpf) {
-		this.cpf = cpf;
-	}
-
-	public Pessoa(String nome, Integer idade, String email, Long cpf) {
+	public Pessoa(String nome, String email) {
 		super();
 		this.nome = nome;
-		this.idade = idade;
 		this.email = email;
-		this.cpf = cpf;
 	}
 
 	public Pessoa() {
