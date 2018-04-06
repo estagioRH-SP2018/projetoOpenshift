@@ -28,7 +28,7 @@
 		</plugins>
 	</build>
 	<dependencies>
-	<dependency>
+		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>jaxrs-api</artifactId>
 			<version>3.0.12.Final</version>
