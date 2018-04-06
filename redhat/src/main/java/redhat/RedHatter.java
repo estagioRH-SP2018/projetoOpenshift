@@ -70,4 +70,8 @@ public class RedHatter extends Pessoa {
 		this.cpf = cpf;
 	}
 	
+	public RedHatter() {
+		super();
+	}
+	
 }

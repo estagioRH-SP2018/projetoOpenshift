@@ -6,18 +6,6 @@ public class Cliente extends Pessoa {
 	private Long cnpj;
 	private Boolean subscricaoAtiva;
 
-	public Cliente(String nome, String email) {
-		super(nome, email);
-	}
-
-	public Cliente(String nome, String email, Long cpfVendedor, Long cnpj,
-			Boolean subscricaoAtiva) {
-		super(nome, email);
-		this.cpfVendedor = cpfVendedor;
-		this.cnpj = cnpj;
-		this.subscricaoAtiva = subscricaoAtiva;
-	}
-
 	public Long getCpfVendedor() {
 		return cpfVendedor;
 	}
@@ -40,6 +28,18 @@ public class Cliente extends Pessoa {
 
 	public void setSubscricaoAtiva(Boolean subscricaoAtiva) {
 		this.subscricaoAtiva = subscricaoAtiva;
+	}
+
+	public Cliente(String nome, String email, Long cpfVendedor, Long cnpj,
+			Boolean subscricaoAtiva) {
+		super(nome, email);
+		this.cpfVendedor = cpfVendedor;
+		this.cnpj = cnpj;
+		this.subscricaoAtiva = subscricaoAtiva;
+	}
+	
+	public Cliente() {
+		super();
 	}
 
 }
