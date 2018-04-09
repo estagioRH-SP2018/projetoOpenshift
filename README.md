@@ -41,7 +41,7 @@ Implantar uma API RESTful utilizando Docker 1.13 a partir de uma implementação
 # Utilizando a API
 Os seguintes passos são feitos utilizando uma ferramenta que possibilita requisições HTTP GET e POST:
 
-## POST
+## Requisições POST
 ### Inclusão de RedHatters:
     http://$IP:8080/redhat-0.1/api/pessoa/incluiRedHatter?nome={nome}&idade={idade}&email={email}&cpf={cpf}&centroDeCusto={centroDeCusto}&salario={salario}&especialidade={especialidade}&cargo={cargo}
 ##### Exemplo
@@ -51,7 +51,7 @@ Os seguintes passos são feitos utilizando uma ferramenta que possibilita requis
     http://$IP:8080/redhat-0.1/api/pessoa/incluiCliente?nome={nome}&email={email}&cpfVendedor={cpfVendedor}&cnpj={cnpj}&subscricaoAtiva={subscricaoAtiva}
 ##### Exemplo
     http://172.17.0.2:8080/redhat-0.1/api/pessoa/incluiCliente?nome=JoãoCliente&email=joao@cliente.com&cpfVendedor=12312312312&cnpj=123123123123123&subscricaoAtiva=true
-## GETs
+## Requisições GET
 Os métodos abaixo retornam um JSON com os dados inseridos previamente.
 
 ### Visualização de Clientes e RedHatters :
