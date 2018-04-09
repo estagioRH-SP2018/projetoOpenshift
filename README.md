@@ -2,15 +2,15 @@
 # Objetivo
 Implantar uma API RESTful utilizando Docker 1.13 a partir de uma implementação convencional de um JBoss EAP 7.1.
 
-### *Pré-requisito: Docker e Postman instalados
+### *Pré-requisito: Docker e Ferramenta GET/POST instalados
 		https://docs.docker.com/install/
 		https://www.getpostman.com/
-
+Obs: No caso utilizaremos o Postman mas é possível operar com qualquer outra ferramenta de requisições GET e POST.
 # Criação de imagem e container
 ### Passo 1: Fazer um clone do repositório projetoOpenshift
 	 $ git clone https://github.com/lcaparel/projetoOpenshift
 
-### Passo 2: Acessar o diretorio Arquivos do projetoOPenshift e gerar uma nova imagem com a aplicação dentro do EAP 
+### Passo 2: Acessar o diretorio Arquivos do projetoOpenshift e gerar uma nova imagem com a aplicação dentro do EAP 
 	 $ cd Arquivos/
 	 $ sudo docker build -t imagem-eap-restful ./
 
@@ -47,20 +47,20 @@ Os seguintes passos são feitos utilizando uma ferramenta que possibilita requis
 ##### Exemplo
 	http://172.17.0.2:8080/redhat-0.1/api/pessoa/incluiRedHatter?nome=Fulano&idade=33&email=email@exemplo.com&cpf=12312312312&centroDeCusto=1&salario=150000&especialidade=plataforma&cargo=CEO
 ---
-### Inclusão de Clientes :
+### Inclusão de Clientes:
     http://$IP:8080/redhat-0.1/api/pessoa/incluiCliente?nome={nome}&email={email}&cpfVendedor={cpfVendedor}&cnpj={cnpj}&subscricaoAtiva={subscricaoAtiva}
 ##### Exemplo
     http://172.17.0.2:8080/redhat-0.1/api/pessoa/incluiCliente?nome=JoãoCliente&email=joao@cliente.com&cpfVendedor=12312312312&cnpj=123123123123123&subscricaoAtiva=true
 ## Requisições GET
 Os métodos abaixo retornam um JSON com os dados inseridos previamente.
 
-### Visualização de Clientes e RedHatters :
+### Visualização de Clientes e RedHatters:
 	http://$IP:8080/redhat-0.1/api/pessoa/pessoas/
 --- 
-### Visualização de Clientes :
+### Visualização de Clientes:
 	http://$IP:8080/redhat-0.1/api/pessoa/clientes/
 --- 
-### Visualização de RedHatters
+### Visualização de RedHatters:
 
     http://$IP:8080/redhat-0.1/api/pessoa/redHatters/
 
